@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="match_parent"
+	android:fitsSystemWindows="true"
+	android:layout_height="match_parent">
+	<ImageView
+		android:id="@+id/backgroundGradation"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_centerHorizontal="true"
+		android:layout_alignParentTop="true"
+		android:src="@drawable/new_circles_image" />
+	<ImageView
+		android:id="@+id/Logoplace"
+		android:layout_width="428dp"
+		android:layout_height="652.4dp"
+		android:layout_alignParentTop="true"
+		android:layout_centerHorizontal="true"
+		android:layout_marginTop="35dp"
+		android:src="@drawable/new_person_image1"/>
+
+	<LinearLayout
+		android:background="@drawable/new_layout_vertical_rounded"
+		android:id="@+id/mainloginliner"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_alignParentBottom="true"
+		android:gravity="center"
+		android:orientation="vertical"
+		android:layout_marginTop="20dp">
+		 
+		<LinearLayout
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_centerHorizontal="true"
+			android:gravity="center"
+			android:layout_marginTop="30dp"
+			android:layout_marginStart="26dp"
+			android:layout_marginEnd="26dp"
+			android:orientation="vertical"
+			android:layout_marginBottom="20dp"
+			android:layout_alignParentBottom="true">
+			 
+			<androidx.viewpager.widget.ViewPager
+				android:id="@+id/viewPager"
+				android:layout_width="match_parent"
+				android:layout_height="130dp">
+			</androidx.viewpager.widget.ViewPager>
+			 
+			<me.relex.circleindicator.CircleIndicator
+				android:id="@+id/indicator"
+				android:layout_below="@+id/viewPager"
+				android:layout_width="match_parent"
+				android:layout_height="40dp"
+				android:layout_marginTop="5dp"
+				app:ci_drawable="@drawable/white_radius"
+				app:ci_drawable_unselected="@drawable/grey_radius" />
+
+			<androidx.appcompat.widget.AppCompatButton
+				android:id="@+id/RegisterButton"
+				style="?android:attr/borderlessButtonStyle"
+				android:layout_width="match_parent"
+				android:layout_height="55dp"
+				android:layout_marginTop="15dp"
+				android:layout_marginBottom="5dp"
+				android:background="@drawable/round_button_pressed"
+				android:text="@string/Lbl_Next"
+				android:textAppearance="?android:attr/textAppearanceSmall"
+				android:textColor="@color/gnt_white"
+				android:textSize="13sp"
+				android:visibility="visible" />
+			 
+			<androidx.appcompat.widget.AppCompatButton
+				android:id="@+id/SkipButton"
+				style="?android:attr/borderlessButtonStyle"
+				android:layout_width="match_parent"
+				android:layout_height="55dp"
+				android:layout_marginTop="8dp"
+				android:layout_marginBottom="5dp"
+				android:background="@drawable/round_button_pressed"
+				android:backgroundTint="@color/gnt_black"
+				android:text="@string/Lbl_Skip"
+				android:textAppearance="?android:attr/textAppearanceSmall"
+				android:textColor="@color/gnt_white"
+				android:textSize="15dp"
+				android:visibility="visible" />
+			  
+		</LinearLayout>
+		 
+	</LinearLayout>
+
+</RelativeLayout> 

@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	android:orientation="vertical"
+	android:layout_width="match_parent"
+	android:background="@drawable/rounded_dialog"
+	android:layout_height="match_parent">
+	 
+	<!--Head Page -->
+	<LinearLayout
+		android:id="@+id/mainLayout"
+		android:layout_width="match_parent"
+		android:layout_gravity="center_horizontal"
+		android:gravity="center_horizontal"
+		android:layout_height="20dp">
+		<View
+			android:layout_width="80dp"
+			android:layout_height="4dp"
+			android:layout_gravity="center"
+			android:gravity="center"
+			android:background="?attr/colorDivider" />
+	</LinearLayout>
+	<TextView
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:text="@string/Lbl_Logout"
+		android:textColor="@color/accent"
+		android:textStyle="bold"
+		android:gravity="center"
+		android:layout_margin="8dp"
+		android:layout_gravity="center"
+		android:layout_centerVertical="true"
+		android:textSize="20sp" />
+	<View
+		android:layout_width="match_parent"
+		android:layout_height="1dp"
+		android:layout_gravity="center"
+		android:gravity="center"
+		android:layout_margin="10dp"
+		android:background="?attr/colorDivider" />
+
+	<TextView
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:text="@string/Lbl_Are_you_logout"
+		android:gravity="center"
+		android:layout_margin="8dp"
+		android:layout_gravity="center"
+		android:layout_centerVertical="true"
+		android:textSize="20sp" />
+
+	<LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:weightSum="2"
+		android:layout_marginEnd="20dp"
+		android:layout_marginStart="20dp"
+		android:gravity="center_vertical"
+		android:orientation="horizontal">
+
+		<androidx.appcompat.widget.AppCompatButton
+			android:layout_width="wrap_content"
+			android:layout_height="50dp"
+			android:layout_weight="1"
+			android:id="@+id/btnCancel"
+			android:textSize="16sp"
+			android:layout_gravity="center"
+			android:layout_margin="10dp"
+			android:background="@drawable/round_button_normal"
+			android:tag="false"
+			android:paddingTop="1dp"
+			android:paddingStart="17dp"
+			android:paddingEnd="17dp"
+			android:textAlignment="center"
+			android:textAllCaps="false"
+			android:text="@string/Lbl_Cancel"
+			android:forceDarkAllowed="false"
+			android:textColor="@color/accent" />
+
+		<androidx.appcompat.widget.AppCompatButton
+			android:layout_width="wrap_content"
+			android:layout_height="50dp"
+			android:layout_weight="1"
+			android:id="@+id/btnYes"
+			android:textSize="16sp"
+			android:layout_gravity="center"
+			android:layout_margin="10dp"
+			android:background="@drawable/round_button_pressed"
+			android:tag="false"
+			android:paddingTop="1dp"
+			android:paddingStart="17dp"
+			android:paddingEnd="17dp"
+			android:textAlignment="center"
+			android:textAllCaps="false"
+			android:text="@string/Lbl_Yes"
+			android:forceDarkAllowed="false"
+			android:textColor="@color/gnt_white" />
+
+	</LinearLayout>
+	<View
+		android:layout_height="?android:attr/actionBarSize"
+		android:layout_width="match_parent" />
+</LinearLayout>
+

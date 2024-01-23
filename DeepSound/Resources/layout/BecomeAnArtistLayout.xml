@@ -1,0 +1,338 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:background="?attr/colorFill"
+	android:orientation="vertical">
+
+	<androidx.appcompat.widget.Toolbar
+		android:id="@+id/toolbar"
+		android:layout_width="match_parent"
+		android:layout_height="48dp"
+		app:theme="@style/ToolbarTheme"
+		android:layout_gravity="top"
+		app:layout_collapseMode="pin"
+		app:titleTextAppearance="@style/Toolbar.TitleText"
+		android:background="?attr/colorFill"
+		android:elevation="2dp" />
+
+	<androidx.core.widget.NestedScrollView
+		android:id="@+id/nested_scroll_view"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:background="?attr/colorFill"
+		android:clipToPadding="false"
+		android:scrollbars="none"
+		android:scrollingCache="true"
+		app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+		<LinearLayout
+			android:id="@+id/lyt_form"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:orientation="vertical"
+			android:padding="0dp">
+
+			<View
+				android:layout_width="match_parent"
+				android:layout_height="40dp"
+				android:layout_alignParentBottom="true" />
+
+			<TextView
+				android:id="@+id/subTitle"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:text="@string/Lbl_SubTitleBecomeArtist"
+				android:textSize="18sp"
+				android:gravity="center"
+				android:layout_gravity="center"
+				android:padding="5dp"
+				android:layout_marginEnd="30dp"
+				android:layout_marginStart="30dp"
+				android:textAppearance="@style/TextAppearance.MaterialComponents.Caption" />
+
+			<LinearLayout
+				android:layout_margin="5dp"
+				android:layout_width="match_parent"
+				android:orientation="horizontal"
+				android:layout_height="wrap_content"
+				android:weightSum="2">
+				 
+				<FrameLayout
+					android:layout_width="wrap_content"
+					android:layout_height="150dp"
+					android:layout_weight="1"
+					android:background="@drawable/EditTextStyleOne"
+					android:layout_margin="10dp">
+
+					<ImageView
+						android:id="@+id/imagePersonal"
+						android:layout_width="match_parent"
+						android:layout_height="150dp"
+						android:gravity="center"
+						android:layout_gravity="center"
+						android:scaleType="centerCrop" />
+
+					<LinearLayout
+						android:id="@+id/btn_selectImagePersonal"
+						android:layout_width="match_parent"
+						android:layout_height="match_parent"
+						android:layout_gravity="center"
+						android:gravity="center"
+						android:orientation="vertical">
+
+						<ImageView
+							android:layout_width="30dp"
+							android:layout_height="30dp"
+							android:src="@drawable/icon_image_vector"
+							android:tint="@color/accent"
+							android:layout_gravity="center" />
+
+						<TextView
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content"
+							android:text="@string/Lbl_YourPersonalPhoto"
+							android:layout_marginTop="10dp"
+							android:layout_gravity="center"
+							android:gravity="center"
+							android:textSize="16sp"
+							android:textColor="@color/accent"/>
+
+					</LinearLayout>
+
+				</FrameLayout>
+				 
+				<FrameLayout
+					android:layout_width="wrap_content"
+					android:layout_height="150dp"
+					android:layout_weight="1"
+					android:background="@drawable/EditTextStyleOne"
+					android:layout_margin="10dp">
+
+					<ImageView
+						android:id="@+id/imagePassport"
+						android:layout_width="match_parent"
+						android:layout_height="150dp"
+						android:gravity="center"
+						android:layout_gravity="center"
+						android:scaleType="centerCrop" />
+
+					<LinearLayout
+						android:id="@+id/btn_selectImagePassport"
+						android:layout_width="match_parent"
+						android:layout_height="match_parent"
+						android:layout_gravity="center"
+						android:gravity="center"
+						android:orientation="vertical">
+
+						<ImageView
+							android:layout_width="30dp"
+							android:layout_height="30dp"
+							android:src="@drawable/icon_image_vector"
+							android:tint="@color/accent"
+							android:layout_gravity="center" />
+
+						<TextView
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content"
+							android:text="@string/Lbl_PassportIdCard"
+							android:layout_marginTop="10dp"
+							android:layout_gravity="center"
+							android:gravity="center"
+							android:textSize="16sp"
+							android:textColor="@color/accent"/>
+
+					</LinearLayout>
+
+				</FrameLayout>				 
+
+			</LinearLayout>
+
+			<!--Name Section -->
+			<LinearLayout
+				android:id="@+id/LayoutName"
+				android:paddingTop="5dp"
+				android:layout_marginTop="5dp"
+				android:layout_marginEnd="10dp"
+				android:layout_width="match_parent"
+				android:orientation="horizontal"
+				android:layout_height="wrap_content">
+				<TextView
+					android:id="@+id/IconName"
+					android:layout_width="40dp"
+					android:layout_height="wrap_content"
+					android:layout_centerVertical="true"
+					android:text="#"
+					android:textSize="20sp"
+					android:gravity="center"
+					android:layout_gravity="center"
+					android:layout_marginStart="5dp" />
+				<EditText
+					android:id="@+id/NameEditText"
+					style="@style/EditTextNormalStyle"
+					android:layout_width="match_parent"
+					android:layout_height="50dp"
+					android:background="@drawable/EditTextStyleOne"
+					android:layout_alignParentEnd="true"
+					android:hint="@string/Lbl_Name"
+					android:textSize="15sp"
+					android:layout_marginStart="3dp" />
+			</LinearLayout>
+
+			<!--Description Section -->
+			<LinearLayout
+				android:id="@+id/LayoutDescription"
+				android:paddingTop="5dp"
+				android:layout_marginTop="5dp"
+				android:layout_width="match_parent"
+				android:orientation="horizontal"
+				android:layout_marginEnd="10dp"
+				android:layout_height="wrap_content">
+				<TextView
+					android:id="@+id/IconDescription"
+					android:layout_width="40dp"
+					android:layout_height="wrap_content"
+					android:layout_centerVertical="true"
+					android:text="#"
+					android:gravity="center"
+					android:layout_gravity="start"
+					android:layout_marginTop="3dp"
+					android:textSize="20sp"
+					android:layout_marginStart="5dp" />
+				<EditText
+					android:id="@+id/DescriptionEditText"
+					style="@style/EditTextNormalStyle"
+					android:layout_width="match_parent"
+					android:layout_height="90dp"
+					android:background="@drawable/EditTextStyleOne"
+					android:hint="@string/Lbl_Description"
+					android:textSize="15sp"
+					android:gravity="start"
+					android:layout_alignParentEnd="true"
+					android:layout_marginStart="3dp" />
+			</LinearLayout>
+		
+			<!--Genres Section -->
+			<LinearLayout
+				android:id="@+id/LayoutGenres"
+				android:paddingTop="5dp"
+				android:layout_marginTop="5dp"
+				android:layout_marginEnd="10dp"
+				android:layout_width="match_parent"
+				android:orientation="horizontal"
+				android:layout_height="wrap_content">
+				<TextView
+					android:id="@+id/IconGenres"
+					android:layout_width="40dp"
+					android:layout_height="wrap_content"
+					android:layout_centerVertical="true"
+					android:text="#"
+					android:textSize="20sp"
+					android:gravity="center"
+					android:layout_gravity="center"
+					android:layout_marginStart="5dp" />
+				<EditText
+					android:id="@+id/GenresEditText"
+					style="@style/EditTextNormalStyle"
+					android:layout_width="match_parent"
+					android:layout_height="50dp"
+					android:background="@drawable/EditTextStyleOne"
+					android:layout_alignParentEnd="true"
+					android:hint="@string/Lbl_Genres"
+					android:textSize="15sp"
+					android:layout_marginStart="3dp" />
+			</LinearLayout>
+		
+			<!--Website Section -->
+			<LinearLayout
+				android:id="@+id/LayoutWebsite"
+				android:paddingTop="5dp"
+				android:layout_marginTop="5dp"
+				android:layout_marginEnd="10dp"
+				android:layout_width="match_parent"
+				android:orientation="horizontal"
+				android:layout_height="wrap_content">
+				<TextView
+					android:id="@+id/IconWebsite"
+					android:layout_width="40dp"
+					android:layout_height="wrap_content"
+					android:layout_centerVertical="true"
+					android:text="#"
+					android:textSize="20sp"
+					android:gravity="center"
+					android:layout_gravity="center"
+					android:layout_marginStart="5dp" />
+				<EditText
+					android:id="@+id/WebsiteEditText"
+					style="@style/EditTextNormalStyle"
+					android:layout_width="match_parent"
+					android:layout_height="50dp"
+					android:background="@drawable/EditTextStyleOne"
+					android:layout_alignParentEnd="true"
+					android:hint="@string/Lbl_Website"
+					android:textSize="15sp"
+					android:layout_marginStart="3dp"
+					android:inputType="textWebEmailAddress"/>
+			</LinearLayout>
+			
+			<TextView
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:text="@string/Lbl_SubTitleBecomeArtist_Review"
+				android:textSize="16sp"
+				android:gravity="center"
+				android:layout_gravity="center"
+				android:padding="5dp"
+				android:layout_marginEnd="30dp"
+				android:layout_marginStart="30dp"
+				android:textAppearance="@style/TextAppearance.MaterialComponents.Caption" />
+			 
+			<!--Buttons Section -->
+			<LinearLayout
+				android:paddingTop="5dp"
+				android:layout_marginTop="6dp"
+				android:layout_marginBottom="10dp"
+				android:layout_width="match_parent"
+				android:gravity="center_horizontal"
+				android:orientation="vertical"
+				android:layout_height="wrap_content">
+				<androidx.appcompat.widget.AppCompatButton
+					android:id="@+id/ApplyButton"
+					android:background="@drawable/round_button_pressed"
+					android:layout_height="50dp"
+					android:layout_width="match_parent"
+					android:padding="5dp"
+					android:forceDarkAllowed="false"
+					style="@style/TextAppearance.MaterialComponents.Body1"
+					android:text="@string/Btn_Send"
+					android:textColor="@color/gnt_white"
+					android:textSize="17sp"
+					android:clickable="true"
+					android:layout_marginEnd="30dp"
+					android:layout_marginStart="30dp"
+					android:layout_marginTop="19dp"
+					android:gravity="center"
+					android:layout_marginBottom="10dp" />
+				<View
+					android:layout_width="match_parent"
+					android:layout_height="40dp"
+					android:layout_alignParentBottom="true" />
+			</LinearLayout>
+			<View
+				android:layout_height="?android:attr/actionBarSize"
+				android:layout_width="match_parent" />
+
+			<com.google.android.gms.ads.admanager.AdManagerAdView
+				android:id="@+id/multiple_ad_sizes_view"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:layout_alignParentBottom="true"
+				android:layout_centerHorizontal="true"
+				app:adSize="MEDIUM_RECTANGLE,120x20,250x250,320x100,SMART_BANNER"
+				app:adUnitId="@string/banner_multiple_ad_sizes_id" />
+		</LinearLayout>
+	</androidx.core.widget.NestedScrollView>
+
+</LinearLayout>

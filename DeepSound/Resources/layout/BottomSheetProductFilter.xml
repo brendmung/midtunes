@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	android:orientation="vertical"
+	android:layout_width="match_parent"
+	android:background="@drawable/rounded_dialog"
+	android:layout_height="match_parent">
+	 
+	<!--Head Page -->
+	<LinearLayout
+		android:id="@+id/mainLayout"
+		android:layout_width="match_parent"
+		android:layout_gravity="center_horizontal"
+		android:gravity="center_horizontal"
+		android:layout_height="20dp">
+		<View
+			android:layout_width="80dp"
+			android:layout_height="4dp"
+			android:layout_gravity="center"
+			android:gravity="center"
+			android:background="?attr/colorDivider" />
+	</LinearLayout>
+	<TextView
+		android:id="@+id/titlepage"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:text="@string/Lbl_Filter"
+		android:gravity="center"
+		android:layout_margin="8dp"
+		android:layout_gravity="center"
+		android:layout_centerVertical="true"
+		android:textSize="20sp" />
+	<View
+		android:layout_width="match_parent"
+		android:layout_height="1dp"
+		android:layout_gravity="center"
+		android:gravity="center"
+		android:layout_marginHorizontal="10dp"
+		android:background="?attr/colorDivider" />
+	 
+	<!--Price Section -->
+	<LinearLayout
+		android:id="@+id/LayoutPrice"
+		android:paddingTop="5dp"
+		android:layout_marginTop="5dp"
+		android:layout_width="wrap_content"
+		android:orientation="horizontal"
+		android:weightSum="100"
+		android:layout_marginEnd="5dp"
+		android:layout_height="wrap_content">
+		<TextView
+			android:id="@+id/IconPrice"
+			android:layout_width="40dp"
+			android:layout_height="wrap_content"
+			android:layout_centerVertical="true"
+			android:text="#"
+			android:gravity="center"
+			android:layout_gravity="center"
+			android:textSize="20sp"
+			android:layout_marginStart="5dp" />
+		<EditText
+			android:id="@+id/MinimumEditText"
+			style="@style/EditTextNormalStyle"
+			android:layout_width="match_parent"
+			android:layout_weight="50"
+			android:ems="10"
+			android:layout_height="45dp"
+			android:background="@drawable/EditTextStyleOne"
+			android:layout_alignParentEnd="true"
+			android:hint="@string/Lbl_PriceMin"
+			android:textSize="15sp"
+			android:maxLines="1"
+			android:gravity="start|center"
+			android:inputType="number"
+			android:layout_marginStart="3dp" />
+		<EditText
+			android:id="@+id/MaximumEditText"
+			style="@style/EditTextNormalStyle"
+			android:layout_width="match_parent"
+			android:layout_weight="50"
+			android:ems="10"
+			android:layout_height="45dp"
+			android:background="@drawable/EditTextStyleOne"
+			android:layout_alignParentEnd="true"
+			android:hint="@string/Lbl_PriceMax"
+			android:textSize="15sp"
+			android:maxLines="1"
+			android:gravity="start|center"
+			android:inputType="number"
+			android:layout_marginStart="3dp" />
+	</LinearLayout>
+	<!--Category Section -->
+	<LinearLayout
+		android:id="@+id/LayoutCategory"
+		android:paddingTop="5dp"
+		android:layout_marginTop="5dp"
+		android:layout_marginEnd="5dp"
+		android:layout_width="match_parent"
+		android:orientation="horizontal"
+		android:layout_height="wrap_content">
+		<TextView
+			android:id="@+id/IconCategory"
+			android:layout_width="40dp"
+			android:layout_height="wrap_content"
+			android:layout_centerVertical="true"
+			android:text="#"
+			android:gravity="center"
+			android:layout_gravity="center"
+			android:textSize="20sp"
+			android:layout_marginStart="5dp" />
+		<EditText
+			android:id="@+id/CategoryEditText"
+			style="@style/EditTextNormalStyle"
+			android:layout_width="match_parent"
+			android:layout_height="40dp"
+			android:hint="@string/Lbl_Category"
+			android:textSize="15sp"
+			android:gravity="start|center"
+			android:background="@drawable/EditTextStyleOne"
+			android:layout_alignParentEnd="true"
+			android:layout_marginStart="3dp" />
+	</LinearLayout>
+	<!--Buttons Section -->
+	<LinearLayout
+		android:paddingTop="5dp"
+		android:layout_marginTop="6dp"
+		android:layout_marginBottom="10dp"
+		android:orientation="vertical"
+		android:layout_width="match_parent"
+		android:gravity="center_horizontal"
+		android:layout_height="wrap_content">
+		<androidx.appcompat.widget.AppCompatButton
+			android:id="@+id/ApplyButton"
+			android:forceDarkAllowed="false"
+			android:background="@drawable/round_button_pressed"
+			android:layout_height="50dp"
+			android:layout_width="match_parent"
+			android:padding="5dp"
+			style="@style/TextAppearance.MaterialComponents.Body1"
+			android:text="@string/Lbl_ApplyFilter"
+			android:textColor="@color/gnt_white"
+			android:textSize="12sp"
+			android:clickable="true"
+			android:layout_marginEnd="30dp"
+			android:layout_marginStart="30dp"
+			android:layout_marginTop="19dp"
+			android:gravity="center"
+			android:layout_marginBottom="10dp" />
+		<View
+			android:layout_height="?attr/actionBarSize"
+			android:layout_width="match_parent" />
+	</LinearLayout>
+</LinearLayout>

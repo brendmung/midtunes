@@ -1,0 +1,344 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:orientation="vertical">
+
+	<ImageView
+		android:id="@+id/backArrow"
+		android:layout_width="28dp"
+		android:layout_height="28dp"
+		android:background="?attr/selectableItemBackgroundBorderless"
+		android:clickable="true"
+		android:layout_alignParentStart="true"
+		android:layout_alignParentTop="true"
+		android:layout_marginStart="20dp"
+		android:layout_marginTop="10dp"
+		android:scaleType="centerCrop"
+		android:src="@drawable/icon_back_arrow_left" />
+
+	<androidx.core.widget.NestedScrollView
+		android:id="@+id/nested_scroll_view"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:layout_centerInParent="true"
+		android:scrollbars="none"
+		android:scrollingCache="true">
+		<LinearLayout
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:layout_centerInParent="true"
+			android:orientation="vertical">
+
+			<ImageView
+				android:id="@+id/appicon"
+				android:layout_width="90dp"
+				android:layout_height="90dp"
+				android:layout_below="@id/backArrow"
+				android:layout_gravity="center_horizontal"
+				android:layout_marginTop="40dp"
+				android:src="@mipmap/icon" />
+
+			<TextView
+				android:id="@+id/logintext"
+				android:layout_marginTop="30dp"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_below="@id/appicon"
+				android:layout_centerHorizontal="true"
+				android:layout_gravity="center_horizontal"
+				android:text="@string/Lbl_Create_An_Account"
+				
+				android:textSize="25dp"
+				android:textStyle="bold" />
+
+			<LinearLayout
+				android:id="@+id/basiclinearLayout"
+				android:layout_width="match_parent"
+				android:layout_height="match_parent"
+				android:layout_below="@id/logintext"
+				android:layout_centerInParent="true"
+				android:layout_marginStart="26dp"
+				android:layout_marginEnd="26dp"
+				android:orientation="vertical"
+				android:padding="@dimen/spacing_large">
+
+				<RelativeLayout
+					android:layout_width="match_parent"
+					android:layout_height="60dp"
+					android:id="@+id/usernameframelayout"
+					android:layout_marginTop="10dp"
+					android:layout_marginBottom="0dp"
+					android:background="@drawable/new_login_status">
+
+					<ImageView
+						android:id="@+id/usernameicon"
+						android:layout_width="20dp"
+						android:layout_height="20dp"
+						android:layout_alignParentStart="true"
+						android:layout_centerVertical="true"
+						android:layout_marginStart="20dp"
+						android:tint="@color/text_color_in_between"
+						android:layout_marginTop="10dp"
+						android:src="@drawable/new_username" />
+
+					<EditText
+						android:id="@+id/edt_username"
+						android:layout_width="match_parent"
+						android:layout_height="wrap_content"
+						android:layout_centerVertical="true"
+						android:layout_gravity="center_vertical"
+						android:layout_marginStart="15dp"
+						android:layout_marginEnd="5dp"
+						android:layout_toEndOf="@id/usernameicon"
+						android:background="@null"
+						android:hint="@string/Lbl_Username"
+						android:inputType="textEmailAddress"
+						android:maxLength="80"
+						android:maxLines="1"
+						android:singleLine="true"
+						
+						android:textColorHint="@color/text_color_in_between"
+						android:textSize="14sp"
+						android:theme="@style/DefaultEditText" />
+
+				</RelativeLayout>
+
+				<RelativeLayout
+					android:layout_width="match_parent"
+					android:layout_height="60dp"
+					android:id="@+id/emailframelayout"
+					android:layout_marginTop="24dp"
+					android:layout_marginBottom="0dp"
+					android:background="@drawable/new_login_status">
+
+					<ImageView
+						android:id="@+id/emailicon"
+						android:layout_width="20dp"
+						android:layout_height="20dp"
+						android:layout_alignParentStart="true"
+						android:layout_centerVertical="true"
+						android:layout_marginStart="20dp"
+						android:layout_marginTop="10dp"
+						android:src="@drawable/new_email_signup" />
+
+					<EditText
+						android:id="@+id/edt_email"
+						android:layout_width="match_parent"
+						android:layout_height="wrap_content"
+						android:layout_centerVertical="true"
+						android:layout_gravity="center_vertical"
+						android:layout_marginStart="15dp"
+						android:layout_marginEnd="5dp"
+						android:layout_toEndOf="@id/emailicon"
+						android:background="@null"
+						android:hint="@string/Lbl_Email"
+						android:inputType="textEmailAddress"
+						android:maxLength="80"
+						android:maxLines="1"
+						android:singleLine="true"
+						
+						android:textColorHint="@color/text_color_in_between"
+						android:textSize="14sp"
+						android:theme="@style/DefaultEditText" />
+
+				</RelativeLayout>
+
+				<RelativeLayout
+					android:layout_width="match_parent"
+					android:layout_height="60dp"
+					android:id="@+id/passframelayout"
+					android:layout_marginTop="24dp"
+					android:layout_marginBottom="0dp"
+					android:background="@drawable/new_login_status">
+
+					<ImageView
+						android:id="@+id/passicon"
+						android:layout_width="20dp"
+						android:layout_height="20dp"
+						android:layout_alignParentStart="true"
+						android:layout_centerVertical="true"
+						android:layout_marginStart="20dp"
+						android:layout_marginTop="10dp"
+						android:src="@drawable/new_pass_signup" />
+
+					<EditText
+						android:id="@+id/edt_password"
+						android:layout_width="match_parent"
+						android:layout_height="wrap_content"
+						android:layout_centerVertical="true"
+						android:layout_gravity="center_vertical"
+						android:layout_marginStart="15dp"
+						android:layout_marginEnd="5dp"
+						android:layout_toEndOf="@id/passicon"
+						android:background="@null"
+						android:hint="@string/Lbl_Password"
+						android:inputType="textPassword"
+						android:maxLength="80"
+						android:maxLines="1"
+						android:singleLine="true"
+						
+						android:textColorHint="@color/text_color_in_between"
+						android:textSize="14sp"
+						android:theme="@style/DefaultEditText" />
+
+					<ImageView
+						android:id="@+id/eyesicon"
+						android:layout_width="23dp"
+						android:layout_height="23dp"
+						android:background="?attr/selectableItemBackgroundBorderless"
+						android:clickable="true"
+						android:layout_alignParentEnd="true"
+						android:layout_centerVertical="true"
+						android:layout_marginStart="20dp"
+						android:layout_marginEnd="30px"
+						android:layout_marginTop="10dp"
+						android:src="@drawable/new_eyes_signup" />
+
+				</RelativeLayout>
+
+				<RelativeLayout
+					android:layout_width="match_parent"
+					android:layout_height="60dp"
+					android:id="@+id/passconfirmframelayout"
+					android:layout_marginTop="24dp"
+					android:layout_marginBottom="0dp"
+					android:background="@drawable/new_login_status">
+
+					<ImageView
+						android:id="@+id/passconfirmicon"
+						android:layout_width="20dp"
+						android:layout_height="20dp"
+						android:layout_alignParentStart="true"
+						android:layout_centerVertical="true"
+						android:layout_marginStart="20dp"
+						android:layout_marginTop="10dp"
+						android:src="@drawable/new_pass_signup" />
+
+					<EditText
+						android:id="@+id/edt_Confirmpassword"
+						android:layout_width="match_parent"
+						android:layout_height="wrap_content"
+						android:layout_centerVertical="true"
+						android:layout_gravity="center_vertical"
+						android:layout_marginStart="15dp"
+						android:layout_marginEnd="5dp"
+						android:layout_toEndOf="@id/passconfirmicon"
+						android:background="@null"
+						android:hint="@string/Lbl_ConfirmPassword"
+						android:inputType="textPassword"
+						android:maxLength="80"
+						android:maxLines="1"
+						android:singleLine="true"
+						
+						android:textColorHint="@color/text_color_in_between"
+						android:textSize="14sp"
+						android:theme="@style/DefaultEditText" />
+
+					<ImageView
+						android:id="@+id/eyes2icon"
+						android:layout_width="23dp"
+						android:layout_height="23dp"
+						android:background="?attr/selectableItemBackgroundBorderless"
+						android:clickable="true"
+						android:layout_alignParentEnd="true"
+						android:layout_centerVertical="true"
+						android:layout_marginStart="20dp"
+						android:layout_marginEnd="30px"
+						android:layout_marginTop="10dp"
+						android:src="@drawable/new_eyes_signup" />
+
+				</RelativeLayout>
+
+				<TextView
+					android:layout_marginTop="20dp"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:layout_gravity="center"
+					android:layout_marginStart="8dp"
+					android:layout_marginEnd="8dp"
+					android:gravity="center_vertical"
+					android:text="@string/Lbl_By_registering_you_agree_to_our"
+					android:textColor="@color/secondaryText"
+					android:textSize="12sp"  />
+
+				<TextView
+					android:id="@+id/txt_termsservices"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:layout_gravity="center"
+					android:layout_marginStart="8dp"
+					android:layout_marginEnd="8dp"
+					android:gravity="center_vertical"
+					android:layout_marginTop="1dp"
+					android:text="@string/Lbl_TermsOfUse"
+					
+					android:textSize="12sp"
+					android:textStyle="normal" />
+
+				<RelativeLayout
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:layout_marginTop="25dp">
+
+					<androidx.appcompat.widget.AppCompatButton
+						android:id="@+id/SignInButton"
+						style="?android:attr/borderlessButtonStyle"
+						android:layout_width="match_parent"
+						android:layout_height="55dp"
+						android:layout_marginBottom="20dp"
+						android:background="@drawable/new_button_rounded"
+						android:text="@string/Lbl_SignUp"
+						android:textAppearance="?android:attr/textAppearanceSmall"
+						android:textColor="@color/gnt_white"
+						android:textSize="13sp"
+						android:visibility="visible" />
+
+					<ProgressBar
+						android:id="@+id/progress_bar"
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:layout_centerInParent="true"
+						android:indeterminateTint="@color/accent"
+						android:visibility="gone" />
+				</RelativeLayout>
+
+				<LinearLayout
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:layout_marginTop="26dp"
+					android:gravity="center"
+					android:orientation="horizontal">
+
+					<TextView
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:layout_gravity="center_vertical"
+						android:layout_marginStart="8dp"
+						android:gravity="center_vertical"
+						android:text="@string/Lbl_Already_Have_an_Account"
+						android:textColor="@color/secondaryText"
+						android:textSize="13sp"  />
+
+					<TextView
+						android:id="@+id/txt_signin"
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:layout_gravity="center_vertical"
+						android:layout_marginStart="8dp"
+						android:gravity="center_vertical"
+						android:textFontWeight="500"
+						android:text="@string/Lbl_SignIn"
+						android:textColor="@color/accent"
+						android:textSize="13sp" />
+
+				</LinearLayout>
+
+			</LinearLayout>
+
+		</LinearLayout>
+	</androidx.core.widget.NestedScrollView>
+
+</LinearLayout>

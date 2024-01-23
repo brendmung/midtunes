@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:background="?attr/colorFill"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        app:theme="@style/ToolbarTheme"
+        android:layout_gravity="top"
+        app:layout_collapseMode="pin"
+        app:titleTextAppearance="@style/Toolbar.TitleText"
+        android:background="?attr/colorFill"
+        android:elevation="2dp" />
+    <androidx.core.widget.NestedScrollView
+	    android:id="@+id/nested_scroll_view"
+	    android:layout_width="match_parent"
+	    android:layout_height="match_parent"
+	    android:layout_centerInParent="true"
+	    android:scrollbars="none"
+	    android:scrollingCache="true">
+	    <LinearLayout
+		    android:layout_width="match_parent"
+		    android:layout_height="match_parent"
+		    android:padding="10dp"
+		    android:orientation="vertical" >
+            
+		    <View
+			    android:layout_height="20dp"
+			    android:layout_width="match_parent" />
+
+            <TextView
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:text="@string/Lbl_SubscribeToPremium"
+                android:textSize="28sp"
+				android:textStyle="bold"
+				android:textColor="@color/accent"
+				android:layout_gravity="center_horizontal" 
+                android:gravity="center_horizontal"/>
+
+            <TextView
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:textSize="15sp"
+				android:layout_marginTop="10dp"
+				android:text="@string/Lbl_EnjoyListening"
+				android:layout_gravity="center_horizontal" 
+                android:gravity="center_horizontal"/>
+			 
+			<androidx.cardview.widget.CardView
+				android:id="@+id/GoProLayout"
+				android:layout_gravity="fill"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:minHeight="200dp"
+				app:cardBackgroundColor="@color/accent"
+				app:cardCornerRadius="28dp"
+				android:layout_margin="20dp"
+				app:cardElevation="5dp"
+				android:outlineAmbientShadowColor="@color/accent"
+				android:outlineSpotShadowColor="@color/accent">
+				<LinearLayout  
+					android:orientation="vertical"
+					android:layout_width="match_parent"
+					android:layout_height="match_parent"
+					android:layout_gravity="center_horizontal" 
+					android:layout_margin="15dp">
+					 
+					<ImageView
+						android:layout_width="50dp"
+						android:layout_height="50dp"
+						android:layout_gravity="center_horizontal" 
+						android:src="@drawable/icon_additional_vector"/>
+					 
+					<TextView
+						android:id="@+id/priceTextView"
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:textSize="20dp"
+						android:textColor="@color/gnt_white"
+						android:textStyle="bold"
+						android:layout_gravity="center_horizontal" />
+					 
+					<View
+						android:layout_width="match_parent"
+						android:layout_height="1dp"
+						android:layout_margin="10dp"
+						android:background="@color/gnt_white"/>
+
+					<LinearLayout
+						android:id="@+id/OptionLinerLayout"
+						android:layout_width="match_parent"
+						android:layout_height="wrap_content"
+						android:orientation="vertical"
+						android:layout_margin="15dp" />
+					   
+					<androidx.appcompat.widget.AppCompatButton
+						android:layout_width="wrap_content"
+						android:layout_height="40dp"
+						android:id="@+id/btnUpgrade"
+						android:textSize="15sp"
+						android:layout_gravity="center"
+						android:layout_marginTop="10dp"
+						android:background="@drawable/round_button_pressed"
+						android:backgroundTint="@color/gnt_white"
+						android:tag="false"
+						android:paddingTop="1dp"
+						android:paddingStart="17dp"
+						android:paddingEnd="17dp"
+						android:textAlignment="center"
+						android:textAllCaps="false"
+						android:textStyle="bold"
+						android:text="@string/Lbl_upgrade_now"
+						android:forceDarkAllowed="false"
+						android:textColor="@color/accent" />
+					 
+				</LinearLayout>
+			</androidx.cardview.widget.CardView>
+			  
+            <View
+                android:layout_height="?android:attr/actionBarSize"
+                android:layout_width="match_parent" />
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</LinearLayout>
