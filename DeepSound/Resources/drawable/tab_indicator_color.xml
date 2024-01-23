@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+	<!-- UNSELECTED TAB STATE -->
+	<item android:state_selected="false" android:state_pressed="false">
+		<layer-list>
+			<item>
+				<shape android:shape="rectangle" />
+			</item>
+			<item android:gravity="bottom">
+				<shape android:shape="rectangle">
+					<size android:height="1dp" />
+					<solid android:color="@color/EndColorToolBar" />
+				</shape>
+			</item>
+		</layer-list>
+	</item>
+</selector>
