@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:id="@+id/storyDisplay"
+	android:layout_marginBottom="0dp"
+	android:orientation="vertical">
+ 
+	<ImageView
+		android:id="@+id/imagstoryDisplay"
+		android:src="@drawable/imageplacholder"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:minHeight="500dp"
+		android:gravity="center"
+		android:layout_gravity="center"
+		android:layout_centerInParent="true" />
+
+	<LinearLayout
+		android:id="@+id/actions"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:baselineAligned="false"
+		android:orientation="horizontal"
+		android:visibility="visible">
+
+		<View
+			android:id="@+id/reverse"
+			android:layout_width="0dp"
+			android:layout_height="match_parent"
+			android:layout_weight="1"
+			android:orientation="vertical" />
+
+		<View
+			android:id="@+id/center"
+			android:layout_width="0dp"
+			android:layout_height="match_parent"
+			android:layout_weight="4"
+			android:orientation="vertical" />
+
+		<View
+			android:id="@+id/skip"
+			android:layout_width="0dp"
+			android:layout_height="match_parent"
+			android:layout_weight="1"
+			android:orientation="vertical" />
+
+	</LinearLayout>
+
+	<LinearLayout
+		android:id="@+id/story_body_layout"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_alignParentBottom="true"
+		android:layout_gravity="center|bottom"
+		android:background="@xml/gradientblack"
+		android:orientation="vertical">
+
+		<androidx.appcompat.widget.AppCompatButton
+			android:id="@+id/MoreInfoButton"
+			android:background="@drawable/round_button_pressed"
+			android:layout_height="45dp"
+			android:layout_width="280dp"
+			android:paddingHorizontal="5dp"
+			android:forceDarkAllowed="false"
+			style="@style/TextAppearance.MaterialComponents.Body1"
+			android:text="@string/Lbl_MoreInfo"
+			android:textColor="@color/gnt_white"
+			android:textSize="17sp"
+			android:clickable="true"
+			android:gravity="center"
+			android:layout_gravity="center"
+			android:layout_marginBottom="20dp" />
+
+		<FrameLayout
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_gravity="center|bottom"
+			android:layout_marginBottom="0dp">
+
+			<LinearLayout
+				android:id="@+id/open_seen_list_layout"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:layout_gravity="center"
+				android:clickable="true"
+				android:gravity="center"
+				android:visibility="invisible"
+				android:orientation="horizontal"
+				android:padding="16dp">
+
+				<TextView
+					android:id="@+id/iconSeen"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:layout_margin="5dp"
+					android:text="Ic"
+					android:textSize="18sp"
+					android:gravity="center"
+					android:textColor="@color/gnt_white" />
+
+				<TextView
+					android:id="@+id/seen_counter"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:text="0"
+					android:textSize="14sp"
+					android:gravity="center"
+					android:textStyle="bold"
+					android:textColor="@color/gnt_white"/>
+
+			</LinearLayout>
+
+		</FrameLayout>
+
+	</LinearLayout>
+
+</FrameLayout>

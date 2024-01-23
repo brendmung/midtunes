@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:orientation="vertical"
+                android:id="@+id/LibraryFragmentContainer"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+	<LinearLayout
+		android:id="@+id/TopSection"
+		android:layout_width="match_parent"
+		android:layout_height="52dp"
+		android:gravity="center_vertical"
+		android:orientation="horizontal">
+		<ImageView
+			android:id="@+id/imageIcon"
+			android:layout_width="24dp"
+			android:layout_height="24dp"
+			android:layout_marginStart="12dp"
+			android:foregroundGravity="center_vertical"
+			android:src="@mipmap/icon"/> 
+
+		<TextView
+			android:id="@+id/toolbartitle"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:padding="0dp"
+			android:textSize="18sp"
+			android:textStyle="bold"
+			android:text="@string/Lbl_Favorites"
+			android:textFontWeight="700"
+			android:layout_weight="1"
+			android:layout_marginStart="15dp" />
+		 
+		<ImageView
+			android:id="@+id/SearchIcon"
+			android:layout_width="25dp"
+			android:layout_height="25dp"
+			android:background="?attr/selectableItemBackgroundBorderless"
+			android:clickable="true"
+			android:layout_marginStart="5dp"
+			android:layout_marginEnd="10dp"
+			android:tint="?attr/colorSecondaryExtra"
+			android:src="@drawable/icon_search_vector"/>
+
+	</LinearLayout>
+
+     <LinearLayout
+		android:id="@+id/TopButton"
+		android:layout_below="@id/TopSection"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:weightSum="2"
+		android:gravity="center_vertical"
+		android:orientation="horizontal">
+		  
+		 <LinearLayout
+			 android:id="@+id/btnShuffle"
+			 android:layout_width="wrap_content"
+			 android:layout_height="50dp"
+			 android:layout_weight="1"
+			 android:orientation="horizontal"
+			 android:layout_gravity="center"
+			 android:gravity="center"
+			 android:paddingStart="17dp"
+			 android:paddingEnd="17dp"
+			 android:layout_margin="10dp"
+			 android:background="@drawable/round_button_pressed">
+			
+			 <ImageView
+				 android:layout_width="17dp"
+				 android:layout_height="17dp"
+				 android:layout_marginEnd="10dp"
+				 android:tint="@color/gnt_white"
+				 android:src="@drawable/icon_player_shuffle"/>
+
+			 <TextView
+				 android:layout_width="wrap_content"
+				 android:layout_height="wrap_content"
+				 android:textSize="16sp"
+				 android:textStyle="bold"
+				 android:textColor="@color/gnt_white"
+				 android:text="@string/Lbl_Shuffle"/>
+
+		 </LinearLayout>
+
+		 <LinearLayout
+			 android:id="@+id/btnPlay"
+			 android:layout_width="wrap_content"
+			 android:layout_height="50dp"
+			 android:layout_weight="1"
+			 android:orientation="horizontal"
+			 android:layout_gravity="center"
+			 android:gravity="center"
+			 android:paddingStart="17dp"
+			 android:paddingEnd="17dp"
+			 android:layout_margin="10dp"
+			 android:background="@drawable/round_button_normal">
+			
+			 <ImageView
+				 android:layout_width="17dp"
+				 android:layout_height="17dp"
+				 android:layout_marginEnd="10dp"
+				 android:tint="@color/accent"
+				 android:src="@drawable/new_ic_play"/>
+
+			 <TextView
+				 android:layout_width="wrap_content"
+				 android:layout_height="wrap_content"
+				 android:textSize="16sp"
+				 android:textStyle="bold"
+				 android:textColor="@color/accent"
+				 android:text="@string/Lbl_Play"/>
+
+		 </LinearLayout> 
+
+	</LinearLayout>
+     
+	<RelativeLayout
+		android:id="@+id/Toplayout"
+		android:layout_below="@id/TopButton"
+		android:layout_width="match_parent"
+		android:layout_height="55dp">
+
+		<TextView
+			android:id="@+id/textView_songname"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:ellipsize="end"
+			android:maxLines="1"
+			android:textStyle="bold"
+			android:layout_centerVertical="true"
+			android:layout_alignParentStart="true"
+			android:lines="1"
+			android:textSize="16sp"
+			android:layout_marginBottom="4dp"
+			android:layout_marginStart="15dp"
+			android:layout_marginTop="0dp"
+			android:layout_marginEnd="25dp" />
+
+		<TextView
+			android:id="@+id/swaptext"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:ellipsize="end"
+			android:maxLines="1"
+			android:textStyle="bold"
+			android:text="Ascending"
+			android:textColor="@color/accent"
+			android:layout_alignParentEnd="true"
+			android:layout_centerVertical="true"
+			android:drawableEnd="@drawable/new_ic_swap"
+			android:drawablePadding="10dp"
+			android:lines="1"
+			android:textSize="13sp"
+			android:layout_marginBottom="4dp"
+			android:layout_marginStart="15dp"
+			android:layout_marginTop="0dp"
+			android:layout_marginEnd="15dp" />
+		 
+		<View
+			android:id="@+id/line"
+			android:layout_width="wrap_content"
+			android:layout_height="1dp"
+			android:layout_centerVertical="true"
+			android:layout_marginTop="7dp"
+			android:layout_marginEnd="15dp"
+			android:layout_marginStart="15dp"
+			android:layout_below="@id/textView_songname"
+			android:background="@drawable/new_line" />
+	</RelativeLayout>
+
+	<androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+		android:id="@+id/swipeRefreshLayout"
+		android:layout_width="match_parent"
+		android:layout_below="@+id/Toplayout"
+		android:paddingBottom="55dp"
+		android:layout_height="wrap_content">
+		<androidx.recyclerview.widget.RecyclerView
+			android:id="@+id/recyler"
+			android:clickable="true"
+			android:focusable="false"
+			android:focusableInTouchMode="true"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:scrollbars="vertical"  />
+	</androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+	<ViewStub
+		android:id="@+id/viewStub"
+		android:inflatedId="@+id/subView"
+		android:layout_marginTop="35dp"
+		android:layout_centerInParent="true"
+		android:layout_gravity="center"
+		android:gravity="center"
+		android:layout="@layout/EmptyStateLayout"
+		android:layout_width="match_parent"
+		android:layout_height="350dp" />
+</RelativeLayout>

@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:id="@+id/parent"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+			  android:orientation="vertical"
+              android:background="?attr/colorFill">
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/swipeRefreshLayout"
+        android:layout_below="@+id/TopSection"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <androidx.core.widget.NestedScrollView
+            android:id="@+id/ScrollView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clickable="true"
+            android:focusable="false"
+            android:focusableInTouchMode="true"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+            <LinearLayout
+                android:id="@+id/Main_Linear"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:clickable="true"
+                android:focusable="false"
+                android:layout_marginTop="5dp"
+                android:background="?attr/colorFill"
+                android:focusableInTouchMode="true"
+                android:orientation="vertical">
+                <include
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    layout="@layout/ViewModel_Alert" />
+                <ViewStub
+	                android:id="@+id/viewStubStory"
+	                android:inflatedId="@+id/stubViewStory"
+	                android:layout_width="match_parent"
+	                android:layout_height="wrap_content"
+	                android:layout_marginBottom="10dp"
+	                android:layout="@layout/TemplateRecyclerViewLayout" />
+                <ViewStub
+	                android:id="@+id/viewStubTopSongs"
+	                android:inflatedId="@+id/stubViewTopSongs"
+	                android:layout_width="match_parent"
+	                android:layout_height="wrap_content"
+	                android:layout_marginBottom="10dp"
+	                android:layout="@layout/TemplateRecyclerViewLayout" />
+                <ViewStub
+                    android:id="@+id/viewStubGenres"
+                    android:inflatedId="@+id/stubViewGenres"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:layout="@layout/TemplateRecyclerViewLayout" />
+                <ViewStub
+                    android:id="@+id/viewStubNewReleases"
+                    android:inflatedId="@+id/stubViewNewReleases"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout="@layout/TemplateRecyclerViewLayout" />
+                <ViewStub
+                    android:id="@+id/viewStubRecentlyPlayed"
+                    android:inflatedId="@+id/stubViewRecentlyPlayed"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout="@layout/TemplateRecyclerViewLayout" />
+                <ViewStub
+	                android:id="@+id/viewStubTopAlbums"
+	                android:inflatedId="@+id/stubViewTopAlbums"
+	                android:layout_width="match_parent"
+	                android:layout_height="wrap_content"
+	                android:layout="@layout/TemplateRecyclerViewLayout" />
+                <ViewStub
+                    android:id="@+id/viewStubPopular"
+                    android:inflatedId="@+id/stubViewPopular"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout="@layout/TemplateRecyclerViewLayout" />
+                <ViewStub
+                    android:id="@+id/viewStubArtists"
+                    android:inflatedId="@+id/stubViewArtists"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout="@layout/TemplateRecyclerViewLayout" />
+                <ViewStub
+                    android:id="@+id/viewStub"
+                    android:inflatedId="@+id/subView"
+                    android:layout_marginTop="35dp"
+                    android:layout_centerInParent="true"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:layout="@layout/EmptyStateLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="350dp" />
+                <View
+	                android:layout_height="100dp"
+	                android:layout_width="match_parent" />
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+</LinearLayout>

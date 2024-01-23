@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	android:id="@+id/parent"
+	android:background="?attr/colorFill"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:orientation="vertical">
+	<LinearLayout
+		android:id="@+id/TopSection"
+		android:layout_width="match_parent"
+		android:layout_height="52dp"
+		android:gravity="center_vertical"
+		android:orientation="horizontal">
+		<ImageView
+			android:id="@+id/imageIcon"
+			android:layout_width="24dp"
+			android:layout_height="24dp"
+			android:layout_marginStart="12dp"
+			android:foregroundGravity="center_vertical"
+			android:src="@mipmap/icon"/> 
+
+		<TextView
+			android:id="@+id/toolbartitle"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:padding="0dp"
+			android:textSize="18sp"
+			android:textStyle="bold"
+			android:textFontWeight="700"
+			android:layout_weight="1"
+			android:layout_marginStart="15dp" />
+
+		<ImageView
+			android:id="@+id/searchIcon"
+			android:layout_width="24dp"
+			android:layout_height="24dp"
+			android:background="?attr/selectableItemBackgroundBorderless"
+			android:tint="?attr/colorSecondaryExtra"
+			android:clickable="true"
+			android:layout_marginStart="5dp"
+			android:layout_marginEnd="15dp"
+			android:src="@drawable/icon_search_vector"/>
+
+		<ImageView
+			android:id="@+id/addIcon"
+			android:layout_width="24dp"
+			android:layout_height="24dp"
+			android:background="?attr/selectableItemBackgroundBorderless"
+			android:tint="?attr/colorSecondaryExtra"
+			android:clickable="true"
+			android:layout_marginStart="5dp"
+			android:layout_marginEnd="15dp"
+			android:src="@drawable/icon_add_vector"/>
+
+		<ImageView
+			android:id="@+id/notificationIcon"
+			android:layout_width="24dp"
+			android:layout_height="24dp"
+			android:background="?attr/selectableItemBackgroundBorderless"
+			android:tint="?attr/colorSecondaryExtra"
+			android:clickable="true"
+			android:layout_marginStart="5dp"
+			android:layout_marginEnd="15dp"
+			android:src="@drawable/icon_notification_vector"/>
+
+	</LinearLayout>
+	<com.google.android.material.tabs.TabLayout
+		android:id="@+id/tab_home"
+		app:tabMode="scrollable"
+		app:tabBackground="@drawable/tab_indicator_color"
+		app:tabTextColor="@color/secondaryText"
+		app:tabSelectedTextColor="@color/accent"
+		app:tabTextAppearance="@style/CapsOffTextAppearance"
+		app:tabIndicatorHeight="3dp"
+		app:tabIndicatorColor="@color/accent"
+		app:tabPaddingStart="9dp"
+		app:tabPaddingEnd="10dp"
+		android:layout_width="match_parent"
+		android:layout_gravity="center"
+		android:background="?attr/colorFill"
+		app:layout_collapseMode="pin"
+		android:layout_height="50dp" />
+	<androidx.viewpager2.widget.ViewPager2
+		android:id="@+id/ViewPager"
+		app:layout_behavior="@string/appbar_scrolling_view_behavior"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent" />
+</LinearLayout> 

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	android:id="@+id/main"
+	android:layout_width="100dp"
+	android:layout_height="150dp"
+	android:layout_margin="5dp">
+
+	<com.makeramen.roundedimageview.RoundedImageView
+		android:id="@+id/iv_round_story"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:adjustViewBounds="true"
+		android:src="@drawable/no_profile_image"
+		app:riv_corner_radius="13dp"
+		android:scaleType="centerCrop"/>
+	 
+	<Refractored.Controls.CircleImageView
+		android:id="@+id/civ_story_avatar"
+		android:layout_width="28dp"
+		android:layout_height="28dp"
+		android:layout_gravity="center"
+		app:civ_border_color="?attr/colorFill"
+		app:civ_border_width="1.5dp"
+		android:translationY="35dp"
+		android:src="@drawable/no_profile_image_circle"/>
+
+	<FrameLayout
+		android:layout_width="match_parent"
+		android:layout_height="41dp"
+		android:orientation="vertical"
+		android:layout_gravity="bottom"
+		android:background="@drawable/bg_story_subtract">
+		<TextView
+			android:id="@+id/Txt_Username"
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:layout_marginTop="8dp"
+			android:gravity="center"
+			android:layout_gravity="center"
+			android:text="Alexfin"
+			android:textSize="10dp"
+			android:lines="1"
+			android:clickable="false"
+			android:focusable="false"
+			android:textColor="@color/gnt_white"
+			android:textStyle="bold"/>
+
+	</FrameLayout>
+</FrameLayout>
